@@ -1,4 +1,5 @@
 const path = require('path');
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -9,6 +10,23 @@ module.exports = {
         clean: true
     },
     plugins: [
+        new FaviconsWebpackPlugin({
+            logo: './assets/phpamersfoort-logo.png',
+            cache: true,
+            prefix: '',
+            favicons: {
+                icons: {
+                    android: false,
+                    appleIcon: false,
+                    appleStartup: false,
+                    coast: false,
+                    favicons: true,
+                    firefox: false,
+                    windows: false,
+                    yandex: false,
+                }
+            }
+        }),
         new HtmlWebpackPlugin({
             template: 'index.html',
         })

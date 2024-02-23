@@ -2,8 +2,11 @@
   "name": "phpamersfoort-website",
   "license": "UNLICENSED",
   "devDependencies": {
+    "favicons": "^7.1.0",
+    "favicons-webpack-plugin": "^6.0.0",
     "html-loader": "^5.0.0",
     "html-webpack-plugin": "^5.6.0",
+    "sharp": "^0.33.2",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
     "webpack-image-resize-loader": "^5.0.0"
