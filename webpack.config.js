@@ -23,19 +23,34 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'logos/[name].[contenthash][ext]'
+                    filename: 'images/[name].[contenthash][ext]'
                 },
-                use: [
+                oneOf: [
                     {
-                        loader: "webpack-image-resize-loader",
-                        options: {
-                            width: 200,
-                            height: 120,
-                            fit: 'contain',
-                            background: 'transparent',
-                            format: 'png'
-                        },
+                        test: /logos/,
+                        use: [
+                            {
+                                loader: "webpack-image-resize-loader",
+                                options: {
+                                    width: 200,
+                                    height: 120,
+                                    fit: 'contain',
+                                    background: 'transparent',
+                                    format: 'png'
+                                },
+                            }
+                        ]
                     },
+                    {
+                        use: [
+                            {
+                                loader: "webpack-image-resize-loader",
+                                options: {
+                                    width: 200,
+                                }
+                            }
+                        ]
+                    }
                 ],
             }
         ]
