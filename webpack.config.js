@@ -11,7 +11,7 @@ module.exports = {
     },
     plugins: [
         new FaviconsWebpackPlugin({
-            logo: './assets/phpamersfoort-logo.png',
+            logo: './assets/icon.png',
             cache: true,
             prefix: '',
             favicons: {
@@ -64,7 +64,7 @@ module.exports = {
                             {
                                 loader: "webpack-image-resize-loader",
                                 options: {
-                                    width: 200,
+                                    width: 400,
                                 }
                             }
                         ]
