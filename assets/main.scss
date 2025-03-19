@@ -1,3 +1,8 @@
-$primary: #563e88;
+$primary: #e94b55;
+$secondary: #563e88;
 
 @import "~bootstrap/scss/bootstrap";
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  color: $white;
+}
